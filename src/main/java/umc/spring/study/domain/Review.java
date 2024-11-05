@@ -17,4 +17,8 @@ public class Review {
     private String title;
 
     private Float score;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id") // 외래 키 컬럼 이름을 설정
+    private Member member; // Member와의 관계 매핑
 }
