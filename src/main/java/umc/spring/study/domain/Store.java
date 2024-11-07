@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import umc.spring.study.domain.common.BaseEntity;
 
-import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 

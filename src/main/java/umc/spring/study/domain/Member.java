@@ -5,7 +5,8 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import umc.spring.study.domain.common.BaseEntity;import umc.spring.study.domain.enums.Gender;
+import umc.spring.study.domain.common.BaseEntity;
+import umc.spring.study.domain.enums.Gender;
 import umc.spring.study.domain.enums.MemberStatus;
 import umc.spring.study.domain.enums.SocialType;
 import umc.spring.study.domain.mapping.MemberAgree;
@@ -57,7 +58,7 @@ public class Member extends BaseEntity {
     private List<MemberPrefer> memberPreferList = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    private List<Review> reviewList = new ArrayList<>();
+    private List<Review> reviewList = new ArrayList<>();  // Review와의 관계 추가
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
