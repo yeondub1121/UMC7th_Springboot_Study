@@ -8,7 +8,6 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Store {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
