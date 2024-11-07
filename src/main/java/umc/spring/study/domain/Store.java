@@ -19,3 +19,5 @@ import lombok.*;
 
     private Float score;
 }
+
+//
