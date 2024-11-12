@@ -28,9 +28,11 @@ public class Store extends BaseEntity {
     @JoinColumn(name = "region_id")
     private Region region;
 
+    @Builder.Default
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<Mission> missionList = new ArrayList<>();
 
+    @Builder.Default
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
 
@@ -41,9 +43,7 @@ public class Store extends BaseEntity {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", score=" + score +
-                ", region=" + (region != null ? region.getName() : "N/A") + // region의 이름 출력
+                ", region=" + (region != null ? region.getName() : "N/A") +
                 '}';
     }
 }
-
-//
