@@ -30,6 +30,15 @@ public class Member extends BaseEntity {
     @Column(nullable = false, length = 40)
     private String address;
 
+    @Column(nullable = true)
+    private Integer age; // 나이 추가
+
+    private Integer birthYear;
+
+    private Integer birthMonth;
+
+    private Integer birthDay;
+
     @Column(nullable = false, length = 40)
     private String specAddress;
 
@@ -46,7 +55,7 @@ public class Member extends BaseEntity {
 
     private LocalDate inactiveDate;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = true, length = 50)
     private String email;
 
     private Integer point;
